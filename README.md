@@ -27,9 +27,10 @@ cluster as they share no semantic relation.
 
 To actually put OOOC to use one must simply include the required files in their Java project and create a OOOC object like in the example below:
 (you can create a JAR and use it!)
-``` import OOOC.*;
+import OOOC.*;
 
-public class OOOCTest { public static void main(String[] args) {
+public class OOOCTest {
+  public static void main(String[] args) {
     // Create and store an object in the cluster named "cluster01"
     String objectToStore = "Hello world!";
     test.storeObject("cluster01", objectToStore);
@@ -37,5 +38,5 @@ public class OOOCTest { public static void main(String[] args) {
     // Retrieve object 2 from cluster01 and output it to the console
     String retrievedObject = (String)test.getObject("cluster01", 2);
     System.out.println(retrievedObject);
+  }
 }
-} ```
